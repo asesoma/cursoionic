@@ -19,8 +19,10 @@ export class LoginPage implements OnInit {
   }
 
   async login(forma : NgForm){
-    if(forma.value.email === this.todo.email && forma.value.password === this.todo.pass)
-      this.navCtrl.navigateForward('myapp/tabs/tab1');
+    //console.log(forma.value.email);
+    //console.log(forma.value.password);
+    if(forma.value.email === this.todo.email && forma.value.password === this.todo.pass){
+      this.navCtrl.navigateForward('myapp/tabs/tab1');}
     else{
       let toast = await this.toastController.create({
         message: 'Sus credenciales no son correctas.',
